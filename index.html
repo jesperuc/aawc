@@ -46,15 +46,12 @@
             align-items: center;
         }
 
-        /* LOGO STYLING: ERSTAT BILLED-PLACEHOLDER MED DIT LOGO-FILNAVN */
+        /* LOGO STYLING - OPDATERET TIL NYT LOGO */
         #logo {
-            width: 50px; 
-            height: 50px;
+            width: 120px; /* Gjort større så teksten kan læses */
+            height: auto;
             margin-right: 15px;
-            background-image: url('https://via.placeholder.com/50/FFFFFF/004e64?text=WS');
-            background-size: cover;
-            border-radius: 50%;
-            border: 2px solid white;
+            /* Vi har fjernet border-radius, så trekanten står skarpt */
         }
 
         header h1 {
@@ -165,29 +162,31 @@
             color: var(--primary-color);
         }
         
-        /* SPONSOR SEKTION STYLING */
+        /* SPONSOR SEKTION STYLING - OPDATERET */
         #sponsorer {
             text-align: center;
         }
 
         .sponsor-grid {
             display: flex;
-            justify-content: space-around;
+            justify-content: center; /* Centrerer logoerne */
             align-items: center;
             flex-wrap: wrap;
+            gap: 30px; /* Afstand mellem logoer */
             margin-top: 30px;
         }
 
         .sponsor-logo {
-            max-width: 200px; 
+            max-width: 150px; /* Begrænser bredden så de er ensartede */
+            max-height: 100px; /* Begrænser højden */
+            width: auto;
             height: auto;
-            margin: 15px;
-            opacity: 0.8; /* Gør logoer lidt dæmpede indtil hover */
-            transition: opacity 0.3s;
+            margin: 10px;
+            transition: transform 0.3s;
         }
 
         .sponsor-logo:hover {
-            opacity: 1;
+            transform: scale(1.05); /* Lille zoom effekt */
         }
         
         /* Footer */
@@ -204,131 +203,11 @@
 
     <header>
         <div class="logo-container">
-            <img id="logo" src="https://via.placeholder.com/50/FFFFFF/004e64?text=WS" alt="AAWC Logo">
+            <img id="logo" src="New_logo.png" alt="AAWC Logo">
             <h1>Aabenraa Windsurfing Club (AAWC)</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="#hero">Hjem</a></li>
                 <li><a href="#aktiviteter">Aktiviteter</a></li>
-                <li><a href="#bestyrelsen">Bestyrelsen</a></li>
-                <li><a href="#medlemsskab">Medlemsskab</a></li>
-                <li><a href="#sponsorer">Sponsorer</a></li> <li><a href="#vejr">Vejret</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <h2>Windsurfing & SUP i Aabenraa</h2>
-            <p>Vi mødes til klubdag hver **lørdag kl. 13.00** ved klubhuset. Kom ned og prøv!</p>
-            <a href="#medlemsskab" class="cta-button">Læs om Medlemsskab</a>
-        </section>
-
-        <section id="om_os">
-            <h3>Klubhuset og Fællesskabet</h3>
-            <p>AAWC er den lokale klub for alle, der elsker vandsport og havet. Vi holder til på **Strandvej 11 i Aabenraa**.</p>
-            <p>Hos os er der plads til både nye og erfarne sejlere. Vi stiller **surfbrætter, våddragter og udstyr til rådighed**, hvis du ønsker at prøve windsurfing for første gang. Mød os bare om lørdagen kl. 13.00.</p>
-        </section>
-
-        <section id="aktiviteter">
-            <h3>Vores Aktiviteter</h3>
-            <ul>
-                <li>📅 Ugentlige klubdage (Lørdag kl. 13)</li>
-                <li>🏄 Windsurfing for Begyndere</li>
-                <li>🏆 Lokale stævner & Events</li>
-                <li>🛠️ Udstyr & Træningsvejledning</li>
-            </ul>
-        </section>
-
-        <section id="bestyrelsen">
-            <h3>Mød Bestyrelsen</h3>
-            <p>Bestyrelsen står for den daglige drift og planlægningen af årets aktiviteter. **HUSK at opdatere navnene!**</p>
-            
-            <div class="bestyrelsesmedlem">
-                <h4>Formand: Navn På Formand</h4>
-                <p>Ansvarsområde: Daglig ledelse, ekstern kommunikation.</p>
-                <p>Kontakt: formand@aawc.dk</p>
-            </div>
-            
-            <div class="bestyrelsesmedlem">
-                <h4>Kasserer: Navn På Kasserer</h4>
-                <p>Ansvarsområde: Økonomi og medlemsskab.</p>
-                <p>Kontakt: kasserer@aawc.dk</p>
-            </div>
-            
-            <div class="bestyrelsesmedlem">
-                <h4>Menigt Medlem: Navn</h4>
-                <p>Ansvarsområde: Udstyr og vedligeholdelse.</p>
-            </div>
-        </section>
-        
-        <section id="sponsorer">
-            <h3>Klubbens Støtter og Sponsorer</h3>
-            <p>Vi takker vores sponsorer for deres uvurderlige støtte til AAWC's aktiviteter og udstyr. Klik på logoet for at besøge deres hjemmeside.</p>
-            <div class="sponsor-grid">
-                <a href="https://www.google.com" target="_blank">
-                    <img src="sponsor-logo-1.png" alt="Hovedsponsor Eksempel" class="sponsor-logo">
-                </a>
-                <a href="https://www.google.com" target="_blank">
-                    <img src="sponsor-logo-2.png" alt="Lokal Sponsor Eksempel" class="sponsor-logo">
-                </a>
-                <a href="https://www.google.com" target="_blank">
-                    <img src="sponsor-logo-3.png" alt="Udstyrssponsor Eksempel" class="sponsor-logo">
-                </a>
-            </div>
-        </section>
-        
-        <section id="vejr">
-            <h3>💨 Aktuelle Vejrforhold (Simuleret)</h3>
-            <p>Vejrdata er essentiel for os! (Denne sektion skal normalt integreres med en ekstern vejr-API)</p>
-            <div id="vejr-output">
-                <p>Henter vejrdata for Aabenraa...</p>
-            </div>
-        </section>
-        
-        <section id="medlemsskab">
-            <h3>Bliv en del af AAWC-familien</h3>
-            <p>Ønsker du at vide mere om kontingent, eller har du andre spørgsmål? Kontakt os via Messenger!</p>
-            <a href="https://www.facebook.com/groups/windsurfingAAWC" target="_blank" class="cta-button">Find os på Facebook Gruppe</a>
-        </section>
-
-        <section id="kontakt">
-            <h3>Kontakt Os Direkte</h3>
-            <p>Den hurtigste måde at komme i kontakt med bestyrelsen er via Facebook Messenger. Klik på knappen nedenfor, så åbner chatten i et nyt vindue.</p>
-            
-            <a href="https://m.me/Dit-AAWC-Facebook-Sidenavn" target="_blank" class="cta-button" style="background-color: #0078FF; color: white;">
-                ✉️ Start Chat via Messenger
-            </a>
-            <p style="margin-top: 15px;">Du kan også sende en mail til: <a href="mailto:info@aawc.dk">info@aawc.dk</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>Aabenraa Windsurfing Club &copy; 2025</p>
-        <p>Adresse: Strandvej 11, 6200 Aabenraa</p>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Vejrdata simulation
-            const vejrOutput = document.getElementById('vejr-output');
-            const data = {
-                vindretning: 'Vest/Sydvest (Ideel for Aabenraa)',
-                vindstyrke: '8 m/s',
-                lufttemperatur: '18°C',
-                vandtemperatur: '15°C'
-            };
-            vejrOutput.innerHTML = `
-                <p><strong>Vindretning:</strong> ${data.vindretning}</p>
-                <p><strong>Vindstyrke:</strong> ${data.vindstyrke}</p>
-                <p><strong>Lufttemperatur:</strong> ${data.lufttemperatur}</p>
-                <p><strong>Vandtemperatur:</strong> ${data.vandtemperatur}</p>
-                <p style="color: green;">**Perfekte forhold til et klubmøde!**</p>
-            `;
-        });
-    </script>
-
-    </body>
-</html>
+                <li><a href="#
