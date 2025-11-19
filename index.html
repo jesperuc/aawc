@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aabenraa Windsurfing Club (AAWC) - Velkommen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         /*
         ********************************
-        * Sektion 1: CSS VARIABLER *
+        * Sektion 1: CSS VARIABLER & TYPOGRAFI *
         ********************************
         */
         :root {
-            --primary-color: #004e64;   
-            --secondary-color: #00a4b4; 
+            --primary-color: #004e64;       /* Mørk teal/petrol */
+            --secondary-color: #00a4b4;     /* Lysere Blå/Turkis */
             --text-color: #333;
-            --light-bg: #f8f9fa;
-            --accent-color: #ffc300;    
+            --light-bg: #f0f0f0;            /* Lettere grå baggrund */
+            --accent-color-1: #388E8E;      /* Ny blød accent */
+            --accent-color-2: #8A2BE2;      /* NY: Violet/Lilla for at matche logoet */
+            --accent-color-3: #1abc9c;      /* NY: Frisk farve til aktivitetspakker */
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif; /* NYT: Moderne font */
             margin: 0;
             padding: 0;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: var(--light-bg);
+            background-color: var(--light-bg); 
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700; 
+            color: var(--primary-color);
         }
 
         /*
@@ -33,12 +42,13 @@
         ********************************
         */
         header {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: white; 
+            color: var(--primary-color);
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
         }
 
         .logo-container {
@@ -46,16 +56,17 @@
             align-items: center;
         }
 
-        /* LOGO STYLING - OPDATERET TIL NYT LOGO */
+        /* LOGO STYLING - Bevares fra V5 */
         #logo {
-            width: 120px; /* Gjort større så teksten kan læses */
+            width: 120px;
             height: auto;
             margin-right: 15px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 1.8em;
+            font-size: 1.6em; 
+            color: var(--primary-color);
         }
 
         nav ul {
@@ -66,15 +77,15 @@
         }
 
         nav ul li a {
-            color: white;
+            color: var(--primary-color); 
             text-decoration: none;
             padding: 10px 15px;
             display: block;
-            transition: background-color 0.3s;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--accent-color-2); /* Hover med logoets lilla farve */
         }
 
         /*
@@ -90,8 +101,8 @@
             padding: 40px 20px;
             margin: 20px auto;
             max-width: 1100px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px; /* Blødere kanter overalt */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Blødere skygge */
             background-color: white;
         }
 
@@ -102,30 +113,32 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px; 
             min-height: 350px;
         }
 
         #hero h2 {
-            font-size: 3em;
+            font-size: 3.2em;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            color: white; 
         }
 
         .cta-button {
             display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
+            background-color: var(--accent-color-2); 
+            color: white;
             padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px; 
             margin-top: 20px;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         .cta-button:hover {
-            background-color: #ffd700;
+            background-color: #A052EE; 
+            transform: translateY(-2px);
         }
 
         /* Aktiviteter & Bestyrelse Styling */
@@ -138,22 +151,28 @@
         }
 
         #aktiviteter li {
-            background: var(--secondary-color);
+            background: var(--accent-color-3); 
             color: white;
             padding: 15px;
             margin: 10px;
-            border-radius: 5px;
+            border-radius: 8px;
             width: 220px;
             text-align: center;
-            font-weight: bold;
+            font-weight: 600;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        #aktiviteter li:hover {
+             transform: scale(1.03);
         }
         
         .bestyrelsesmedlem {
-            border: 1px solid #ddd;
+            border: 1px solid #eee;
             padding: 15px;
             margin-bottom: 10px;
-            border-left: 5px solid var(--accent-color);
+            border-left: 5px solid var(--accent-color-1);
+            border-radius: 8px;
         }
         
         .bestyrelsesmedlem h4 {
@@ -161,7 +180,7 @@
             color: var(--primary-color);
         }
         
-        /* SPONSOR SEKTION STYLING */
+        /* SPONSOR SEKTION STYLING - Forbedret med Gråtone */
         #sponsorer {
             text-align: center;
         }
@@ -181,10 +200,14 @@
             width: auto;
             height: auto;
             margin: 10px;
-            transition: transform 0.3s;
+            filter: grayscale(80%); /* Dæmp farverne */
+            opacity: 0.6;
+            transition: filter 0.3s, opacity 0.3s, transform 0.3s;
         }
 
         .sponsor-logo:hover {
+            filter: grayscale(0%); /* Få farverne tilbage ved hover */
+            opacity: 1;
             transform: scale(1.05); 
         }
         
@@ -195,6 +218,21 @@
             text-align: center;
             padding: 20px 0;
             margin-top: 30px;
+        }
+        
+        /* Media Query for mindre skærme */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                justify-content: center;
+                margin-top: 10px;
+            }
+            #hero h2 {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
