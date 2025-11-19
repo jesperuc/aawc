@@ -11,11 +11,11 @@
         ********************************
         */
         :root {
-            --primary-color: #004e64;   /* Dyb blå/Petrol */
-            --secondary-color: #00a4b4; /* Lysere Blå/Turkis */
+            --primary-color: #004e64;   
+            --secondary-color: #00a4b4; 
             --text-color: #333;
             --light-bg: #f8f9fa;
-            --accent-color: #ffc300;    /* Gul til knapper */
+            --accent-color: #ffc300;    
         }
 
         body {
@@ -165,6 +165,31 @@
             color: var(--primary-color);
         }
         
+        /* SPONSOR SEKTION STYLING */
+        #sponsorer {
+            text-align: center;
+        }
+
+        .sponsor-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .sponsor-logo {
+            max-width: 200px; 
+            height: auto;
+            margin: 15px;
+            opacity: 0.8; /* Gør logoer lidt dæmpede indtil hover */
+            transition: opacity 0.3s;
+        }
+
+        .sponsor-logo:hover {
+            opacity: 1;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--primary-color);
@@ -188,7 +213,7 @@
                 <li><a href="#aktiviteter">Aktiviteter</a></li>
                 <li><a href="#bestyrelsen">Bestyrelsen</a></li>
                 <li><a href="#medlemsskab">Medlemsskab</a></li>
-                <li><a href="#vejr">Vejret</a></li>
+                <li><a href="#sponsorer">Sponsorer</a></li> <li><a href="#vejr">Vejret</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
@@ -236,6 +261,22 @@
             <div class="bestyrelsesmedlem">
                 <h4>Menigt Medlem: Navn</h4>
                 <p>Ansvarsområde: Udstyr og vedligeholdelse.</p>
+            </div>
+        </section>
+        
+        <section id="sponsorer">
+            <h3>Klubbens Støtter og Sponsorer</h3>
+            <p>Vi takker vores sponsorer for deres uvurderlige støtte til AAWC's aktiviteter og udstyr. Klik på logoet for at besøge deres hjemmeside.</p>
+            <div class="sponsor-grid">
+                <a href="https://www.google.com" target="_blank">
+                    <img src="sponsor-logo-1.png" alt="Hovedsponsor Eksempel" class="sponsor-logo">
+                </a>
+                <a href="https://www.google.com" target="_blank">
+                    <img src="sponsor-logo-2.png" alt="Lokal Sponsor Eksempel" class="sponsor-logo">
+                </a>
+                <a href="https://www.google.com" target="_blank">
+                    <img src="sponsor-logo-3.png" alt="Udstyrssponsor Eksempel" class="sponsor-logo">
+                </a>
             </div>
         </section>
         
