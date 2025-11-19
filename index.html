@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aabenraa Windsurfing Club (AAWC) - Velkommen</title>
+    <style>
+        /*
+        ********************************
+        * Sektion 1: CSS VARIABLER *
+        ********************************
+        */
+        :root {
+            --primary-color: #004e64;   /* Dyb blå/Petrol */
+            --secondary-color: #00a4b4; /* Lysere Blå/Turkis */
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --accent-color: #ffc300;    /* Gul til knapper */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        /*
+        ********************************
+        * Sektion 2: Header og Navigering *
+        ********************************
+        */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* LOGO STYLING: ERSTAT BILLED-PLACEHOLDER MED DIT LOGO-FILNAVN */
+        #logo {
+            width: 50px; 
+            height: 50px;
+            margin-right: 15px;
+            background-image: url('https://via.placeholder.com/50/FFFFFF/004e64?text=WS');
+            background-size: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /*
+        ********************************
+        * Sektion 3: Layout og CTA *
+        ********************************
+        */
+        main {
+            padding-bottom: 50px;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        /* Hero Sektion */
+        #hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/1200/500?random=3&category=water,windsurf'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 350px;
+        }
+
+        #hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ffd700;
+        }
+
+        /* Aktiviteter & Bestyrelse Styling */
+        #aktiviteter ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #aktiviteter li {
+            background: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 220px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bestyrelsesmedlem {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 5px solid var(--accent-color);
+        }
+        
+        .bestyrelsesmedlem h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img id="logo" src="https://via.placeholder.com/50/FFFFFF/004e64?text=WS" alt="AAWC Logo">
+            <h1>Aabenraa Windsurfing Club (AAWC)</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Hjem</a></li>
+                <li><a href="#aktiviteter">Aktiviteter</a></li>
+                <li><a href="#bestyrelsen">Bestyrelsen</a></li>
+                <li><a href="#medlemsskab">Medlemsskab</a></li>
+                <li><a href="#vejr">Vejret</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Windsurfing & SUP i Aabenraa</h2>
+            <p>Vi mødes til klubdag hver **lørdag kl. 13.00** ved klubhuset. Kom ned og prøv!</p>
+            <a href="#medlemsskab" class="cta-button">Læs om Medlemsskab</a>
+        </section>
+
+        <section id="om_os">
+            <h3>Klubhuset og Fællesskabet</h3>
+            <p>AAWC er den lokale klub for alle, der elsker vandsport og havet. Vi holder til på **Strandvej 11 i Aabenraa**.</p>
+            <p>Hos os er der plads til både nye og erfarne sejlere. Vi stiller **surfbrætter, våddragter og udstyr til rådighed**, hvis du ønsker at prøve windsurfing for første gang. Mød os bare om lørdagen kl. 13.00.</p>
+        </section>
+
+        <section id="aktiviteter">
+            <h3>Vores Aktiviteter</h3>
+            <ul>
+                <li>📅 Ugentlige klubdage (Lørdag kl. 13)</li>
+                <li>🏄 Windsurfing for Begyndere</li>
+                <li>🏆 Lokale stævner & Events</li>
+                <li>🛠️ Udstyr & Træningsvejledning</li>
+            </ul>
+        </section>
+
+        <section id="bestyrelsen">
+            <h3>Mød Bestyrelsen</h3>
+            <p>Bestyrelsen står for den daglige drift og planlægningen af årets aktiviteter. **HUSK at opdatere navnene!**</p>
+            
+            <div class="bestyrelsesmedlem">
+                <h4>Formand: Navn På Formand</h4>
+                <p>Ansvarsområde: Daglig ledelse, ekstern kommunikation.</p>
+                <p>Kontakt: formand@aawc.dk</p>
+            </div>
+            
+            <div class="bestyrelsesmedlem">
+                <h4>Kasserer: Navn På Kasserer</h4>
+                <p>Ansvarsområde: Økonomi og medlemsskab.</p>
+                <p>Kontakt: kasserer@aawc.dk</p>
+            </div>
+            
+            <div class="bestyrelsesmedlem">
+                <h4>Menigt Medlem: Navn</h4>
+                <p>Ansvarsområde: Udstyr og vedligeholdelse.</p>
+            </div>
+        </section>
+        
+        <section id="vejr">
+            <h3>💨 Aktuelle Vejrforhold (Simuleret)</h3>
+            <p>Vejrdata er essentiel for os! (Denne sektion skal normalt integreres med en ekstern vejr-API)</p>
+            <div id="vejr-output">
+                <p>Henter vejrdata for Aabenraa...</p>
+            </div>
+        </section>
+        
+        <section id="medlemsskab">
+            <h3>Bliv en del af AAWC-familien</h3>
+            <p>Ønsker du at vide mere om kontingent, eller har du andre spørgsmål? Kontakt os via Messenger!</p>
+            <a href="https://www.facebook.com/groups/windsurfingAAWC" target="_blank" class="cta-button">Find os på Facebook Gruppe</a>
+        </section>
+
+        <section id="kontakt">
+            <h3>Kontakt Os Direkte</h3>
+            <p>Den hurtigste måde at komme i kontakt med bestyrelsen er via Facebook Messenger. Klik på knappen nedenfor, så åbner chatten i et nyt vindue.</p>
+            
+            <a href="https://m.me/Dit-AAWC-Facebook-Sidenavn" target="_blank" class="cta-button" style="background-color: #0078FF; color: white;">
+                ✉️ Start Chat via Messenger
+            </a>
+            <p style="margin-top: 15px;">Du kan også sende en mail til: <a href="mailto:info@aawc.dk">info@aawc.dk</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Aabenraa Windsurfing Club &copy; 2025</p>
+        <p>Adresse: Strandvej 11, 6200 Aabenraa</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Vejrdata simulation
+            const vejrOutput = document.getElementById('vejr-output');
+            const data = {
+                vindretning: 'Vest/Sydvest (Ideel for Aabenraa)',
+                vindstyrke: '8 m/s',
+                lufttemperatur: '18°C',
+                vandtemperatur: '15°C'
+            };
+            vejrOutput.innerHTML = `
+                <p><strong>Vindretning:</strong> ${data.vindretning}</p>
+                <p><strong>Vindstyrke:</strong> ${data.vindstyrke}</p>
+                <p><strong>Lufttemperatur:</strong> ${data.lufttemperatur}</p>
+                <p><strong>Vandtemperatur:</strong> ${data.vandtemperatur}</p>
+                <p style="color: green;">**Perfekte forhold til et klubmøde!**</p>
+            `;
+        });
+    </script>
+
+    </body>
+</html>
