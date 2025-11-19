@@ -6,6 +6,7 @@
     <title>Aabenraa Windsurfing Club (AAWC) - Velkommen</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* [CSS forbliver uændret for at spare plads] */
         /*
         ********************************
         * Sektion 1: CSS VARIABLER & TYPOGRAFI *
@@ -260,14 +261,14 @@
     <main>
         <section id="hero">
             <h2>Windsurfing & SUP i Aabenraa</h2>
-            <p>Vi mødes til klubdag hver <strong>lørdag kl. 13.00</strong> ved klubhuset. Kom ned og prøv!</p>
+            <p><strong>Nybegynder? Intet problem!</strong><br>Vores instruktører står klar til at lære dig at windsurfe, selvom du ingen erfaring har. Mød os hver <strong>lørdag kl. 13.00</strong> ved klubhuset.</p>
             <a href="#medlemsskab" class="cta-button">Læs om Medlemsskab</a>
         </section>
 
         <section id="om_os">
             <h3>Klubhuset og Fællesskabet</h3>
-            <p>AAWC er den lokale klub for alle, der elsker vandsport og havet. Vi holder til på **Strandvej 11 i Aabenraa**.</p>
-            <p>Hos os er der plads til både nye og erfarne sejlere. Vi stiller **surfbrætter, våddragter og udstyr til rådighed**, hvis du ønsker at prøve windsurfing for første gang. Mød os bare om lørdagen kl. 13.00.</p>
+            <p>AAWC er den lokale klub for alle, der elsker vandsport og havet. Vi holder til på <strong>Strandvej 11 i Aabenraa</strong>.</p>
+            <p>Hos os er der plads til både nye og erfarne sejlere. Vi stiller <strong>surfbrætter, våddragter og udstyr gratis til rådighed</strong> for alle, der ønsker at prøve windsurfing eller SUP. Mød os bare om lørdagen kl. 13.00, og vi hjælper dig i gang!</p>
         </section>
 
         <section id="aktiviteter">
@@ -313,6 +314,37 @@
             </div>
         </section>
         
+        <section id="vejr">
+            <h3>💨 Aktuelle Vejrforhold</h3>
+            <p>Se de seneste vind- og vejrforhold direkte fra Aabenraa Lystbådehavn:</p>
+            <script src="https://www.windfinder.com/widget/forecast/js/aabenraa_lystbadehavn_south_denmark_denmark?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=m_s&unit_pressure=hPa&days=4&show_day=1&show_pressure=0"></script>
+            <noscript><a rel="nofollow" href="https://www.windfinder.com/forecast/aabenraa_lystbadehavn_south_denmark_denmark?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast">Wind forecast for Aabenraa Lystbådehavn</a> provided by <a rel="nofollow" href="https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo">windfinder.com</a></noscript>
+        </section>
+        
+        <section id="medlemsskab">
+            <h3>Bliv en del af AAWC-familien</h3>
+            <p>Hvis du ønsker at blive medlem, kan du enten kontakte <strong>kasserer Jesper U. Christensen på telefon 50 77 02 74</strong> eller indmelde dig direkte til vores <strong>klubdag</strong>, som er hver lørdag kl. 13:00 hele sæsonen.</p>
+            
+            <h4>Det årlige kontingent er som følger:</h4>
+            <ul>
+                <li><strong>Personer under 20 år:</strong> kr. 250,00 årligt</li>
+                <li><strong>Personer på 20 år og derover:</strong> kr. 400,00 årligt</li>
+                <li><strong>Opbevaring af udstyr i klubhuset:</strong> kr. 200,00 årligt</li>
+            </ul>
+            
+            <a href="https://www.facebook.com/groups/windsurfingAAWC" target="_blank" class="cta-button">Find os på Facebook Gruppe</a>
+        </section>
+
+        <section id="kontakt">
+            <h3>Kontakt Os Direkte</h3>
+            <p>Den hurtigste måde at komme i kontakt med bestyrelsen er via Facebook Messenger. Klik på knappen nedenfor, så åbner chatten i et nyt vindue.</p>
+            
+            <a href="https://m.me/AabenraaWindsurfingClub" target="_blank" class="cta-button" style="background-color: #0078FF; color: white;">
+                ✉️ Start Chat via Messenger
+            </a>
+            <p style="margin-top: 15px;">Du kan også sende en mail til: <a href="mailto:jesper@jesperuc.dk">jesper@jesperuc.dk</a></p>
+        </section>
+        
         <section id="sponsorer">
             <h3>Klubbens Støtter og Sponsorer</h3>
             <p>Vi takker vores sponsorer for deres uvurderlige støtte. Klik på logoet for at besøge deres hjemmeside.</p>
@@ -341,64 +373,12 @@
 
             </div>
         </section>
-        
-        <section id="vejr">
-            <h3>💨 Aktuelle Vejrforhold (Simuleret)</h3>
-            <p>Vejrdata er essentiel for os! (Denne sektion skal normalt integreres med en ekstern vejr-API)</p>
-            <div id="vejr-output">
-                <p>Henter vejrdata for Aabenraa...</p>
-            </div>
-        </section>
-        
-        <section id="medlemsskab">
-            <h3>Bliv en del af AAWC-familien</h3>
-            <p>Hvis du ønsker at blive medlem, kan du enten kontakte **kasserer Jesper U. Christensen på telefon 50 77 02 74** eller indmelde dig direkte til vores **klubdag**, som er hver lørdag kl. 13:00 hele sæsonen.</p>
-            
-            <h4>Det årlige kontingent er som følger:</h4>
-            <ul>
-                <li><strong>Personer under 20 år:</strong> kr. 250,00 årligt</li>
-                <li><strong>Personer på 20 år og derover:</strong> kr. 400,00 årligt</li>
-                <li><strong>Opbevaring af udstyr i klubhuset:</strong> kr. 200,00 årligt</li>
-            </ul>
-            
-            <a href="https://www.facebook.com/groups/windsurfingAAWC" target="_blank" class="cta-button">Find os på Facebook Gruppe</a>
-        </section>
-
-        <section id="kontakt">
-            <h3>Kontakt Os Direkte</h3>
-            <p>Den hurtigste måde at komme i kontakt med bestyrelsen er via Facebook Messenger. Klik på knappen nedenfor, så åbner chatten i et nyt vindue.</p>
-            
-            <a href="https://m.me/AabenraaWindsurfingClub" target="_blank" class="cta-button" style="background-color: #0078FF; color: white;">
-                ✉️ Start Chat via Messenger
-            </a>
-            <p style="margin-top: 15px;">Du kan også sende en mail til: <a href="mailto:jesper@jesperuc.dk">jesper@jesperuc.dk</a></p>
-        </section>
     </main>
 
     <footer>
         <p>Aabenraa Windsurfing Club &copy; 2025</p>
         <p>Adresse: Strandvej 11, 6200 Aabenraa</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Vejrdata simulation
-            const vejrOutput = document.getElementById('vejr-output');
-            const data = {
-                vindretning: 'Vest/Sydvest (Ideel for Aabenraa)',
-                vindstyrke: '8 m/s',
-                lufttemperatur: '18°C',
-                vandtemperatur: '15°C'
-            };
-            vejrOutput.innerHTML = `
-                <p><strong>Vindretning:</strong> ${data.vindretning}</p>
-                <p><strong>Vindstyrke:</strong> ${data.vindstyrke}</p>
-                <p><strong>Lufttemperatur:</strong> ${data.lufttemperatur}</p>
-                <p><strong>Vandtemperatur:</strong> ${data.vandtemperatur}</p>
-                <p style="color: green;">**Perfekte forhold til et klubmøde!**</p>
-            `;
-        });
-    </script>
 
     </body>
 </html>
